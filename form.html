@@ -1,0 +1,9 @@
+{% extends 'account-chat.html' %}
+{%block title%}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        
+        <p>Prediction: {{ prediction }} with confidence: {{ confidence }}</p>
+    </div>
+{% endblock %}
