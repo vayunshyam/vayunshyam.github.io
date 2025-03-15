@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vayun's Projects: FC Barcelona</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="FCB">
+    <meta name="keywords" content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, dark mode, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="assets/favicon/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper">
+      <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+      <header class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container">
+          <a class="navbar-brand pe-sm-3" href="index.html"><span class="text-primary flex-shrink-0 me-2">
+          <img src="assets/img/avatar/bear.png" alt="Logo" width="35" height="32" class="flex-shrink-0 me-2">
+         </a>
+
+          <div class="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto" data-bs-toggle="mode">
+            <input class="form-check-input" type="checkbox" id="theme-mode">
+            <label class="form-check-label" for="theme-mode"><i class="ai-sun fs-lg"></i></label>
+            <label class="form-check-label" for="theme-mode"><i class="ai-moon fs-lg"></i></label>
+          </div>
+          <div class="nav align-items-center order-lg-3 ms-n1 me-3 me-sm-0">
+          </div>
+          <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+          <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Projects</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Consulting/Design</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="fcb.html">FC Barcelona</a></li>
+                      <li><a class="dropdown-item" href="synopsys.html">Synopsys</a></li>
+                      <li><a class="dropdown-item" href="arc.html">Arc'teryx</a></li>
+                      <li><a class="dropdown-item" href="ups.html">UPS</a></li>
+                      <li><a class="dropdown-item" href="mavs.html">Dallas Mavericks</a></li>
+                      <li><a class="dropdown-item" href="discord.html">Discord</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Engineering</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="rambus.html">Rambus</a></li>
+                      <li><a class="dropdown-item" href="stratify.html">Stratify</a></li>
+                      <li><a class="dropdown-item" href="phishnet.html">PhishNet</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="position-relative pt-5 mb-5">
+        <div class="bg-secondary position-absolute top-0 end-0 w-100 h-100 d-lg-none"></div>
+        <div class="container position-relative zindex-2 py-5 pb-lg-0">
+          <!-- Breadcrumb-->
+          <nav aria-label="breadcrumb">
+            <ol class="pt-lg-2 pb-1 breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Arc'teryx</li>
+            </ol>
+          </nav>
+          <div class="d-lg-flex align-items-center pt-3 pb-xxl-5"><img class="d-block order-lg-2 me-auto me-lg-0 ms-auto" src="assets/img/avatar/arcbg.png" width="480" alt="Image">
+            <div class="order-lg-1 text-center text-lg-start pe-lg-4 py-4 py-md-5">
+              <h1 class="display-2 text-uppercase pb-3 pb-lg-4">Omnichannel Experience Scoring and Optimization</h1>
+              <p class="fs-lg mx-auto mx-lg-0 mb-0" style="max-width: 530px;">My team and I worked to create a scorecard through which Arc'teryx could evaluate the effectiveness of its omnichannel touchpoints against themselves and competitors.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page content-->
+      <section class="container overflow-hidden pt-lg-2 pt-xl-4 pt-xxl-5">
+        <div class="row py-sm-3 py-md-4 py-lg-5">
+          <div class="col-md-9 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+              <h2 class="h1 pt-2 pt-sm-3 pt-md-4 pt-lg-5 pb-2">About the client</h2>
+              <p class="fs-lg">Arc'teryx is one of the foremost apparel and equipment manufacturers for ski, snowboard, and outdoor utility clothing. They target outdoor enthusiasts with a willingness to spend for quality, and a personalized shopping experience. </p>
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">The challenge</h2>
+              <p class="fs-lg">Much of Arc'teryx high pricing justification is due to its position in a more luxury market, signifying the need for a better omnichannel experience. The company needed a way to evaluate its performance across several channels (in store, POS, online, delivery) against notable competitors in the outdoor gear markets and the high-end apparel markets. </p>
+              <h2 class="h1 pt-3 pt-sm-4 pt-xl-5 pb-2">The solution</h2>
+              <p class="fs-lg mb-0">We researched the efficacy of competitor outdoor apparel manufacturers along with high-end clothing brands in their omnichannel experience, and divided the overall experience into scorecards for each company to be evaluated on. Using curated scoring rubrics based on employee and customer surveys, we scored each company's omnichannel experience, providing Arc'teryx with an effective benchmark for its touchpoints against those of competitors.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Images-->
+        <div class="row py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
+          <div class="col-sm-7 mb-4 mb-sm-0">
+            <div class="position-relative mb-4">
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: #2663f2;" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="250"></div><img class="position-relative zindex-2" src="assets/img/avatar/arcws1.png" alt="Image" data-aos="zoom-in" data-aos-duration="400" data-aos-offset="250">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="position-relative">
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="max-height: 588px; background-color: #216d2a;" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="250"></div><img class="position-relative zindex-2" src="assets/img/avatar/arcws2.png" alt="Image" data-aos="zoom-in" data-aos-duration="400" data-aos-offset="250">
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+ 
+
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark position-relative pb-4 pt-md-3 py-lg-4 py-xl-5">
+      <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255, .02);"></div>
+      <div class="dark-mode container position-relative zindex-2 pt-5 pb-2">
+        <!-- Columns with links-->
+        <div class="row" id="links">
+
+
+          <div class="col-12 col-xl-3 mt-md-2 mt-xl-0 pt-2 pt-md-4 pt-xl-0">
+            <h3 class="h6 text-uppercase mb-1 pb-1">Connect: vayunshyam@berkeley.edu</h3>
+          </div>
+        </div>
+
+        <!-- Logo + Socials + Cards-->
+ 
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll>
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg><i class="ai-arrow-up"></i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main theme script-->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
